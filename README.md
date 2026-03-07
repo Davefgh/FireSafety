@@ -1,18 +1,37 @@
-# FireSafety
+# FireSafety Marketplace
 
-Repository for marketing and selling solutions.
+A premium e-commerce platform for fire safety equipment, inspired by Shopee and Lazada.
 
-## Projects
+## Architecture
 
-### [Marketing Project](./marketing-project)
-
-A premium landing page for marketing products and items. Features:
-
-- Modern, responsive design
-- Vibrant color palette
-- Interactive elements
-- High-quality 3D visualizations
+- **Client**: Next.js (React) + Tailwind CSS
+- **Server**: Node.js + Express.js
 
 ## Getting Started
 
-To view the marketing project, open `marketing-project/index.html` in your browser.
+### 1. Server Setup
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+The server will run on `http://localhost:5000`.
+
+### 2. Client Setup
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+The client will run on `http://localhost:3000`.
+
+## Features
+
+- Dynamic product listing from Express API
+- Shopee-inspired premium UI
+- Responsive design for all devices
+- Animated product cards and transitions
