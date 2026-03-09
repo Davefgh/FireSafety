@@ -1,4 +1,4 @@
-# FireSafety Marketplace
+# ALARMA
 
 A premium e-commerce platform for fire safety equipment, inspired by Shopee and Lazada.
 

@@ -10,7 +10,7 @@ export default {
     extend: {
       colors: {
         shopee: {
-          orange: "#ee4d2d",
+          red: "#e53935",
           light: "#f5f5f5",
           dark: "#222222",
         },
