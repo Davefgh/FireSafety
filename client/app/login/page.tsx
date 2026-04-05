@@ -21,8 +21,9 @@ export default function LoginPage() {
     setIsLoading(true)
 
     try {
-      // Mock login - check localStorage for registered user
+      // Check localStorage for registered user
       const userData = localStorage.getItem('user')
+      
       if (userData) {
         const user = JSON.parse(userData)
         if (user.email === email && user.password === password) {
@@ -31,6 +32,20 @@ export default function LoginPage() {
           return
         }
       }
+      
+      // Also allow test account for frontend development
+      if (email === 'test@example.com' && password === 'password123') {
+        localStorage.setItem('token', 'mock-token-' + Date.now())
+        localStorage.setItem('user', JSON.stringify({
+          email: 'test@example.com',
+          name: 'Test User',
+          birthDate: '1990-01-01',
+          gender: 'other'
+        }))
+        router.push('/dashboard')
+        return
+      }
+      
       setError('Invalid email or password')
     } catch (err: any) {
       setError(err.response?.data?.message || 'Login failed')
